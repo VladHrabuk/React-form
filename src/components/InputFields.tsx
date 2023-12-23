@@ -16,7 +16,7 @@ const InputFields: FC<InputFieldProps> = ({ label, name, placeholder, register, 
             {label}
             </label>
             <input
-            {...register(name, { required: `${label} is a required field!`,
+            {...register(name, {required: `${label} is a required field!`,
             minLength: {
                 value: 2,
                 message: `${label} must be at least 2 characters long!`,
@@ -30,10 +30,11 @@ const InputFields: FC<InputFieldProps> = ({ label, name, placeholder, register, 
                 message: `${label} must contain only letters!`,
               },
             })}
-            className={`mt-2 p-2 w-full border rounded-md focus:outline-none ${
+            className={`mt-2 p-2 w-full border rounded-md focus:outline-none  ${
                 isDirty ? (errors[name] ? 'border-red-500' : 'border-blue-500') : 'border-gray-300'
               }`}
               id={name}
+          
               type="text"
               placeholder={placeholder}
             />
