@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Controller} from 'react-hook-form';
 import ReactSelect from 'react-select';
 
-interface IOption {
+export interface IOption {
   value: string;
   label: string;
   image: string;
 }
 
-interface SelectProps {
+export interface SelectProps {
   control: any;
   name: string;
   label: string;
